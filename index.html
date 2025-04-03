@@ -1,23 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAR Typing Speed Test</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAR Typing Test</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>SAR Typing Speed Test</h1>
-        <div id="timer">Time: 60s</div>
-        <div id="wpm">WPM: 0</div>
-        <div id="accuracy">Accuracy: 100%</div>
-        <div class="text-container" id="text-container"></div>
-        <input type="text" id="input-field" disabled>
-        <div class="keyboard" id="keyboard"></div>
-        <button id="start">Start</button>
-        <button id="restart" disabled>Restart</button>
+      <!-- Header -->
+      <header>
+        <div class="time" id="currentTime">00:00:00</div>
+        <div class="title">SAR Typing Test</div>
+        <div class="date" id="currentDate">01-Mon-Jan-1970</div>
+      </header>
+
+      <!-- Progress Bar and Speed Metrics -->
+      <div class="progress-container">
+        <div class="speed-metrics">
+          <div>Top WPM: <span id="topSpeed">0</span></div>
+          <div>Current WPM: <span id="currentSpeed">0</span></div>
+          <div>Slowest WPM: <span id="slowestSpeed">0</span></div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" id="progressFill"></div>
+          <div class="progress-percent" id="progressPercent">0%</div>
+        </div>
+      </div>
+
+      <!-- Text Display -->
+      <div class="text-display" id="textDisplay">
+        <!-- The reference text will be inserted here -->
+      </div>
+
+      <!-- User Input -->
+      <div class="user-input">
+        <input
+          type="text"
+          id="userInput"
+          autocomplete="off"
+          placeholder="Start typing here..."
+        />
+      </div>
+
+      <!-- Virtual Keyboard -->
+      <div class="keyboard" id="virtualKeyboard">
+        <!-- Keyboard rows will be generated here -->
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <div>
+          <label for="difficulty">Difficulty:</label>
+          <select id="difficulty">
+            <option value="easy">Easy (Short Text)</option>
+            <option value="medium" selected>Medium (Medium Text)</option>
+            <option value="hard">Hard (Long Text)</option>
+          </select>
+        </div>
+        <div>
+          <label for="fontSize">Font Size:</label>
+          <input type="range" id="fontSize" min="14" max="30" value="18" />
+        </div>
+      </div>
     </div>
-    <script src="script.js"></script>
-</body>
+
+    <!-- Modal for Results -->
+    <div class="modal" id="resultsModal">
+      <div class="modal-content">
+        <h2>Results</h2>
+        <p id="resultsSummary"></p>
+        <button id="restartBtn">Restart Test</button>
+      </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio
+      id="keySound"
+      src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YdAAAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg"
+      preload="auto"
+    ></audio>
+    <audio
+      id="errorSound"
+      src="data:audio/wav;base64,UklGRuQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YRQAAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg"
+      preload="auto"
+    ></audio>
+  </body>
+
+  <script src="script.js"></script>
 </html>
