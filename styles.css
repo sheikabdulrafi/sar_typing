@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+.text-container {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.wrong {
+    color: red;
+}
+
+.keyboard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: auto;
+}
+
+.key {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    background-color: lightgray;
+    transition: background 0.2s;
+}
+
+.pressed {
+    background-color: orange !important;
+}
