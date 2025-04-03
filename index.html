@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Speed Test</title>
+    <title>SAR Typing Speed Test</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Typing Speed Test</h1>
-    <div class="text-container" id="text-container"></div>
-    <input type="text" id="input-field" autofocus>
-    <div class="keyboard" id="keyboard"></div>
-
+    <div class="container">
+        <h1>SAR Typing Speed Test</h1>
+        <div id="timer">Time: 60s</div>
+        <div id="wpm">WPM: 0</div>
+        <div id="accuracy">Accuracy: 100%</div>
+        <div class="text-container" id="text-container"></div>
+        <input type="text" id="input-field" disabled>
+        <div class="keyboard" id="keyboard"></div>
+        <button id="start">Start</button>
+        <button id="restart" disabled>Restart</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
