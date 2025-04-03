@@ -1,2 +1,19 @@
-# sar_typing
-SAR Typing is a simple single-page typing speed test application built using HTML, CSS, and JavaScript. It allows users to practice typing with a preset text while visually tracking their progress. The application highlights incorrect characters in red, simulates a virtual keyboard with key animations, and provides real-time feedback.
+# SAR Typing
+
+SAR Typing is a web-based typing speed test that helps users improve their typing skills. It features a real-time text display, error highlighting, and an interactive virtual keyboard.
+
+## Features
+- **Preset Text:** Users type a predefined sentence to measure accuracy and speed.
+- **Error Highlighting:** Incorrect characters are shown in red.
+- **Virtual Keyboard:** Displays pressed keys with animation.
+- **Real-Time Feedback:** Updates as the user types.
+
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+
+## Installation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/sar_typing.git
