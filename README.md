@@ -16,4 +16,4 @@ SAR Typing is a web-based typing speed test that helps users improve their typin
 ## Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/sar_typing.git
+   git clone https://github.com/sheikabdulrafi/sar_typing.git
